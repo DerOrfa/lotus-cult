@@ -1,0 +1,59 @@
+lotus={
+	name="lotus"
+	spawn_enabled=yes
+
+	name_list="lotus_names"
+	ship_prefix="LTS"
+
+	species_name="Lotus Mistress"
+	species_plural="Lotus Order"
+	species_adjective="lotus"
+	species_class="MAM"
+	species_bio=""
+	portrait = lotus
+
+	trait = "lotus"
+	trait = "trait_weak"
+	trait = "trait_nonadaptive"
+
+#	policy = {
+#		slavery = "slavery_allowed_regulated_xenos_only"
+#	}
+
+	government="divine_mandate"
+	ethic="ethic_xenophobe"
+	ethic="ethic_fanatic_materialist"
+	adjective="lotus"
+
+	ftl=wormhole
+	weapon="tech_missiles_1"
+	planet_name="Lotus Prime"
+	planet_class="pc_continental"
+	system_name="Lotus System"
+	initializer="lotus_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_22.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"black"
+			"red"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Shira"
+		portrait="lotus_leader2"
+		ruler_title="Divine Mistress"
+		ruler_title_female="Divine Mistress"
+	}
+}
