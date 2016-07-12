@@ -112,6 +112,7 @@ lotus_system_initializer = {
 				traits = {
 					trait="trait_presentient_proles"
 					trait="trait_strong"
+					trait="trait_rapid_breeders"
 				}
 			}
 
