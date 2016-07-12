@@ -14,7 +14,7 @@ lotus={
 
 	trait = "lotus"
 	trait = "trait_weak"
-	trait = "trait_nonadaptive"
+	trait = "natural_slavers"
 
 #	policy = {
 #		slavery = "slavery_allowed_regulated_xenos_only"
