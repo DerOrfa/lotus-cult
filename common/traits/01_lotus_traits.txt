@@ -1,5 +1,5 @@
 lotus = {
-	cost = 3
+	cost = 2
 	opposites = { "trait_strong" "trait_very_strong" "trait_repugnant" }
 	modifier = {
 		country_leader_cap = 1
