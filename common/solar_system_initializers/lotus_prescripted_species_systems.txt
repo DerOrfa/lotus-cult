@@ -235,10 +235,10 @@ lotus_system_initializer = {
 					replace = yes
 				}
 			}
-#			every_owned_pop = {
-#				limit = { is_species = Servants }
-#				enslave_pop = yes
-#			}
+			every_owned_pop = {
+				limit = { is_species = Servants }
+				enslave_pop = yes
+			}
 		}
 
 	}
