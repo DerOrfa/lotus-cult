@@ -115,7 +115,17 @@ lotus_system_initializer = {
 					trait="trait_rapid_breeders"
 				}
 			}
-
+			create_country = {
+				name = "Lotus Servants"
+				name_list="MAM1"
+				government = "theocratic_oligarchy"
+				species = Servants
+				ethos = {
+					ethic="ethic_fanatic_collectivist"
+					ethic="ethic_spiritualist"
+				}
+				flag = random
+ 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
