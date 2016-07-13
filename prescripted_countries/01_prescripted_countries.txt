@@ -12,10 +12,10 @@ lotus={
 	species_bio=""
 	portrait = lotus
 
-	trait = "lotus" #2
-	trait = "trait_weak" #-1
-	trait = "natural_slavers" #0
-	trait = "trait_presentient_natural_intellectuals" #1
+	trait = trait_intelligent #2
+	trait = trait_weak #-1
+	trait = natural_slavers #0
+	trait = trait_presentient_natural_intellectuals #1
 
 #	policy = {
 #		slavery = "slavery_allowed_regulated_xenos_only"

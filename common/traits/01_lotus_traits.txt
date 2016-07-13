@@ -1,24 +1,12 @@
-lotus = {
-	cost = 2
-	opposites = { "trait_repugnant" }
-	modifier = {
-		country_leader_cap = 1
-		country_leader_pool_size = 1
-		leader_age = 30
-		species_leader_exp_gain = 0.15
-		country_trade_attractiveness = 0.2
-		pop_other_species_happiness = 0.05
-		category_psionics_research_speed_mult = 1
-		planet_border_mult = 0.2
-		pop_fortification_defense = -0.5
-	}
-	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
-}
-
 natural_slavers  = {
 	cost = 0
-	opposites = { "trait_strong" "trait_very_strong" }
+	opposites = { "trait_repugnant" "trait_strong" "trait_very_strong" }
 	modifier = {
+		pop_other_species_happiness = 0.05
+		category_psionics_research_speed_mult = 1
+		leader_age = 30
+		country_leader_cap = 1
+		country_leader_pool_size = 1
 		pop_alien_slavery_tolerance = 1.0
 		pop_eff_wo_slaves = -0.2
 		slave_production_output = 0.15
@@ -31,11 +19,13 @@ natural_slavers  = {
 }
 
 ################################################################
-blessed_by_the_lotus = {
+master_manipulator = {
 	cost = 2
 	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_eye_for_talent.dds"
+	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
 	modifier = {
+		planet_border_mult = 0.2
+		country_trade_attractiveness = 0.2
 		leader_skill_levels = 1
 		leader_influence_cost = 0.25
 		influence_gain_add = 1
