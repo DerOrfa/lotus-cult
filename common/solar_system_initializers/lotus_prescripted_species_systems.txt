@@ -245,6 +245,9 @@ lotus_system_initializer = {
 					amount = 1
 					replace = yes
 				}
+				create_pop = {
+					species = Servants
+				}
 			}
 			every_owned_pop = {
 				limit = { is_species = Servants }
