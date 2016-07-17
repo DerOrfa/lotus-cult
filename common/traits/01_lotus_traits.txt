@@ -3,17 +3,26 @@ natural_slavers  = {
 	opposites = { "trait_repugnant" "trait_strong" "trait_very_strong" }
 	modifier = {
 		pop_other_species_happiness = 0.05
+		tile_resource_society_research_mult = 0.25
 		category_psionics_research_speed_mult = 1
 		leader_age = 30
 		country_leader_cap = 1
 		country_leader_pool_size = 1
-		pop_alien_slavery_tolerance = 1.0
+		pop_alien_slavery_tolerance = 2.0
 		pop_eff_wo_slaves = -0.2
-		slave_production_output = 0.15
-		slave_food_output = 0.15
 		tile_resource_minerals_mult = -0.2
 		tile_resource_food_mult = -0.2
 		pop_food_req_mult = 0.2
+	}
+	icon = "gfx/interface/icons/traits/trait_decadent.dds"
+}
+natural_slaves  = {
+	cost = 1
+	opposites = { "trait_charismatic" "trait_weak" }
+	modifier = {
+		pop_slavery_tolerance = 2.0
+		slave_production_output = 0.15
+		slave_food_output = 0.15
 	}
 	icon = "gfx/interface/icons/traits/trait_decadent.dds"
 }
@@ -24,14 +33,13 @@ master_manipulator = {
 	modification = no
 	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
 	modifier = {
-		planet_border_mult = 0.2
-		country_trade_attractiveness = 0.2
-		leader_skill_levels = 1
+		planet_border_mult = 0.5
+		country_trade_attractiveness = 0.25
 		leader_influence_cost = 0.25
 		influence_gain_add = 1
-		edict_influence_cost = -0.2
+		edict_influence_cost = -0.25
 		edict_length_mult = 0.25
-		pop_happiness = 0.1
+		pop_happiness = 0.15
 	}
 	leader_trait = yes
 	leader_class = { ruler }

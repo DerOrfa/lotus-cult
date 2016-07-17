@@ -1,0 +1,77 @@
+namespace = slaver
+
+event = {
+	id = slaver.1
+
+	fire_only_once = yes
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_trait = natural_slavers
+			}
+			every_owned_planet = {
+				every_owned_pop = { kill_pop = yes } #make space
+				every_tile = { # get some more space for my people
+					limit = { 
+						has_blocker = yes
+						has_resource = {  type = society_research amount = 1 }
+					}
+					remove_blocker = yes
+				}
+				every_tile = { # get my people back
+					limit = { 
+						has_blocker = no 
+						OR = {
+							has_resource = {  type = engineering_research amount = 1 }
+							has_resource = {  type = society_research amount = 1 }
+							has_resource = {  type = physics_research amount = 1 }
+							has_resource = {  type = energy amount = 1 }
+						}
+					}
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+				
+				# create servants 
+				create_species = { #we can do this, because we assume thre is only one planet
+					name = "Servants"
+					class = MAM
+					portrait = human_male_01
+					homeworld = THIS
+					traits = {
+						trait=trait_presentient_proles
+						trait=trait_strong
+						trait=natural_slaves
+						trait=trait_repugnant
+					}
+				}
+				every_tile = { 
+					limit = { 
+						has_blocker = no 
+						OR = {
+							has_resource = {  type = food amount = 1 }
+							has_resource = {  type = minerals amount = 1 }
+						}
+						NOT = {
+							has_resource = {  type = energy amount = 1 }
+						}
+					}
+					
+					create_pop = {
+						species = Servants
+					}
+				}
+
+				every_owned_pop = { #and enslave them
+					limit = { is_species = Servants }
+					enslave_pop = yes
+				}
+			}
+		}
+	}
+}
+
