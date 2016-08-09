@@ -104,7 +104,8 @@ event = {
 					traits = {
 						trait=trait_presentient_proles
 						trait=trait_strong
-						trait=trait_repugnant
+#						trait=trait_agrarian
+#						trait=trait_repugnant
 					}
 				}
 				every_tile = {
