@@ -16,16 +16,6 @@ natural_slavers  = {
 	}
 	icon = "gfx/interface/icons/traits/trait_decadent.dds"
 }
-natural_slaves  = {
-	cost = 1
-	opposites = { "trait_charismatic" "trait_weak" }
-	modifier = {
-		pop_slavery_tolerance = 2.0
-		slave_production_output = 0.15
-		slave_food_output = 0.15
-	}
-	icon = "gfx/interface/icons/traits/trait_decadent.dds"
-}
 
 ################################################################
 master_manipulator = {
@@ -33,9 +23,9 @@ master_manipulator = {
 	modification = no
 	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
 	modifier = {
-		planet_border_mult = 0.5
-		country_trade_attractiveness = 0.25
-		leader_influence_cost = 0.25
+		planet_border_mult = 0.25
+		country_trade_attractiveness = 0.20
+		leader_influence_cost = -0.25
 		influence_gain_add = 1
 		edict_influence_cost = -0.25
 		edict_length_mult = 0.25

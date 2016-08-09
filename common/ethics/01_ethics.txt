@@ -1,0 +1,39 @@
+ethic_broken = {
+	cost = 2
+	category = "col"
+	category_value = 0
+	pop_modifier = {
+		pop_slavery_tolerance = 1.5
+		slave_production_output = 0.2
+		slave_food_output = 0.2
+#		pop_ethic_shift = -1
+		tile_resource_physics_research_mult = -0.5
+		tile_resource_society_research_mult = -0.5
+		tile_resource_engineering_research_mult = -0.5
+		tile_resource_energy_mult = -0.1
+	}
+
+	random_weight = {
+		value = 0
+	}
+}
+
+ethic_mindless = {
+	cost = 2
+	category = "col"
+	category_value = 0
+	pop_modifier = {
+		pop_slavery_tolerance = 2.5
+		slave_production_output = 0.4
+		slave_food_output = 0.3
+#		pop_ethic_shift = -1
+		tile_resource_physics_research_mult = -1
+		tile_resource_society_research_mult = -1
+		tile_resource_engineering_research_mult = -1
+		tile_resource_energy_mult = -0.2
+	}
+
+	random_weight = {
+		value = 0
+	}
+}
