@@ -182,21 +182,96 @@ emancipation = {
 			factor = 0.2
 			pop_has_ethic = ethic_fanatic_collectivist
 		}
-		# Natural slavers are not likely to free slaves
+
+		# natural slavers can't see what wrong with slavery
 		modifier = {
-			factor = 0.2
+			factor = 0.05
 			pop_has_trait = natural_slavers
 			owner = {
 				any_owned_pop = {
 					is_enslaved = yes
+					NOT = { is_same_species = root.species}
+				}
+			}
+		}
+	}
+
+	actions = {
+		suppress_media = {
+			title = FACTION_ACTION_SUPPRESS_MEDIA
+			description = FACTION_ACTION_SUPPRESS_MEDIA_DESC
+
+			cost = {
+				energy = 400
+				influence = 50
+			}
+
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}
+				modifier = {
+					add = 1
+					support > 0.90
 				}
 			}
 		}
 
-	}
+		bribe_leaders = {
+			title = FACTION_ACTION_BRIBE_LEADERS
+			description = FACTION_ACTION_BRIBE_LEADERS
 
-	actions = {
+			cost = {
+				energy = 200
+				influence = 200
+			}
 
+			effect = {
+				add_support = -0.10
+			}
+
+			ai_weight = {
+				base = 0
+				modifier = {
+					add = 1
+					support > 0.10
+				}
+				modifier = {
+					add = 1
+					support > 0.30
+				}
+				modifier = {
+					add = 1
+					support > 0.50
+				}
+				modifier = {
+					add = 1
+					support > 0.70
+				}
+				modifier = {
+					add = 1
+					support > 0.90
+				}
+			}
+		}
 	}
 
 	support_effects = {
