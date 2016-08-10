@@ -259,25 +259,7 @@
 
 		names1 = {
 			weight = 40
-			first_names_male = {
-				Olivia Emily Sophie Jessica Alice Scarlett Emma Daisy Eve Phoebe Sienna Anna Mary Megan Elizabeth Amy Darcy Matilda Erin
-				Lucy Grace Evelyn Amber Harriet Caitlyn Jasmine Madison Kate Eleanor Alexandra Sarah Martha Bethany Rebecca Victoria
-				Gabriella Naomi Lauren Clara Laura Kayla Nicole Skye Eliza Patricia Linda Barbara Jennifer Maria Susan Margaret Dorothy
-				Lisa Nancy Helen Sandra Donna Carol Ruth Sharon Michelle Kimberly Deborah Amelia Charlotte Isabella Ruby Addison Alyssa
-				Abigail Julia Samantha Brooklyn Ashley Natalie Brianna Chloe Hailey Lillian Judith Alison Amanda Angela Audrey Beatrice
-				Brenda Bridget Caroline Cassandra Charity Cecilia Anne Clarissa Christabel Cheryl Cynthia Cadence Cordelia Daphne Deanna
-				Denise Dolores Doreen Drusilia Edith Edna Eleonor Eileen Edwina Ellen Estelle Ethel Felicity Fiona Genevieve Gertie Gwen
-				Gwendolyn Henrietta Imogen Iris Imelda Jacqueline Jane Jenna Joanna Josephine Julianne Kathleen Kierra Kaylee Leah Lois
-				Loretta Lorna Louisa Lynnette Lucinda Mabel Marcia Marilyn Marissa Marjorie Maud Melanie Myrna Mavis Nadine Paula Penelope
-				Philippa Priscilla Rhonda Rita Roberta Rosamund Rosemary Roxanne Sabrina Selma Selina Sibyl Suzanne Tara Tabitha Thelma
-				Teresa Tiffany Vanessa Vivian Melissa Wanda Wendy Winifred Victoria Yvette Vera Zelda Joan Pamela Sherry Adrienne Monica
-				Irene Heather Lindsay Gillian Kristen Odette Felicia Christina Candace Arlene Tisha Majel Fran Doris Julie Courtney Shelly
-				Frances Mandy Mindy Rachel Miranda Virginia Gina Karla Tricia Diane Phyllis Sally Elaine Kara Shannon Susie Elle Gail Ann
-				Kathryn Tina Carrie Miriam Vivica Tamara Judy Willow Hilary Claire Danielle Teri Jackie Kelly Bonnie Holly Janice Brittney
-				Bianca Stephanie Natasha Lydia Mona Meredith Lynda Erica Heidi Paige Carmen Hayden Mallory Mercedes Marion Winona Jill
-				Molly Constance Jenny Penny Meryl Jodie Veronica April Sigourney Jillian Honor
-			}
-			first_names_female = {
+			first_names = {
 				Olivia Emily Sophie Jessica Alice Scarlett Emma Daisy Eve Phoebe Sienna Anna Mary Megan Elizabeth Amy Darcy Matilda Erin
 				Lucy Grace Evelyn Amber Harriet Caitlyn Jasmine Madison Kate Eleanor Alexandra Sarah Martha Bethany Rebecca Victoria
 				Gabriella Naomi Lauren Clara Laura Kayla Nicole Skye Eliza Patricia Linda Barbara Jennifer Maria Susan Margaret Dorothy
@@ -333,10 +315,7 @@
 				"Walker Jr." "Taylor Jr." "Scott Jr." "Meriweather II" "Barksdale III" "Leadbetter IV" "Pemberton II" "Trapier III" Kowalski
 				Rabinowitz Feldman Katz Roykirk Decker
 			}
-			regnal_first_names_male = {
-				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
 			}
 			regnal_second_names = {
@@ -346,12 +325,7 @@
 
 		names2 = {
 			weight = 20
-			first_names_male = {
-				Anna Yelena Olga Oksana Tatyana Svetlana Nadya Yekaterina Irina Galina Miroslava Anastasia Vera Polina Lyudmila Elena
-				Marina Darya Irma Ksenia Alexandra Nadesja Valentina Arina Alya Galenka Katya Ljuba Radmila Natacha Vlada Nadezhda
-				Tatiana Sonia Mira
-			}
-			first_names_female = {
+			first_names = {
 				Anna Yelena Olga Oksana Tatyana Svetlana Nadya Yekaterina Irina Galina Miroslava Anastasia Vera Polina Lyudmila Elena
 				Marina Darya Irma Ksenia Alexandra Nadesja Valentina Arina Alya Galenka Katya Ljuba Radmila Natacha Vlada Nadezhda
 				Tatiana Sonia Mira
@@ -362,10 +336,7 @@
 				Zhivenkov Kazakov Krutov Ivannikov Kolosov Kuzin Larionov Maksimushkin Markov Ostrovsky Polachev Rychenkov Romanov
 				Sayanovich Statnik Sorokin Turgenev Titov Tvardovsky Antonov Skobelev Lazarev Makarov Dragomirov Alexseyev
 			}
-			regnal_first_names_male = {
-				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
 			}
 			regnal_second_names = {
@@ -375,11 +346,7 @@
 
 		names3 = {
 			weight = 40
-			first_names_male = {
-				Ai Bi Cui Chan Dai Dan Fang Hong Hua Huan Jiao Ju Juan Lan Lian Lin Mei Na Ni Qian Qiao Qing Shan Shu Ting Wen Xia Xian
-				Xiang Xiu Xue Yan Ying Yu Yuan Yun Zhen Zhi Zhu Zi
-			}
-			first_names_female = {
+			first_names = {
 				Ai Bi Cui Chan Dai Dan Fang Hong Hua Huan Jiao Ju Juan Lan Lian Lin Mei Na Ni Qian Qiao Qing Shan Shu Ting Wen Xia Xian
 				Xiang Xiu Xue Yan Ying Yu Yuan Yun Zhen Zhi Zhu Zi
 			}
@@ -387,10 +354,7 @@
 				Liang Luo Kuang Lu Zheng Lin Xu Xie Wang Zhu Yang Mao Shen Hu Tan He Deng Wu Cheng Gao Wan Kong Pan Sima Zhuge Ouyang Situ
 				Huang Zhao Zhang
 			}
-			regnal_first_names_male = {
-				Ai Bi Lian Lin Mei Na Ni Xiu Xue Yan Ying Yu Yuan
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Ai Bi Lian Lin Mei Na Ni Xiu Xue Yan Ying Yu Yuan
 			}
 			regnal_second_names = {
@@ -400,12 +364,7 @@
 
 		names4 = {
 			weight = 15
-			first_names_male = {
-				Anna Elsa Emma Helga Ursula Gisela Ingrid Ilse Jessika Sandra Stefanie Andrea Anja Katrin Birgit Martina Heike Sabine Erika
-				Edith Lena Lisa Katharina Claudia Silvia Tina Annike Renate Bettina Wibke Sara Lina Julia Marith Heidi Angelika Christel
-				Gretchen Hilde Hildegard Gertrude Wilhelmina Lisbeth Kerstin Johanna Anita
-			}
-			first_names_female = {
+			first_names = {
 				Anna Elsa Emma Helga Ursula Gisela Ingrid Ilse Jessika Sandra Stefanie Andrea Anja Katrin Birgit Martina Heike Sabine Erika
 				Edith Lena Lisa Katharina Claudia Silvia Tina Annike Renate Bettina Wibke Sara Lina Julia Marith Heidi Angelika Christel
 				Gretchen Hilde Hildegard Gertrude Wilhelmina Lisbeth Kerstin Johanna Anita
@@ -415,10 +374,7 @@
 				"von Gebser" "von Fritsch" "von Wrangel" "von Halkett" "von Boyen" "von Falkenstein" Dreyer Wolf Klein Richter Schäfer
 				Neumann Braun Schwarz Krüger Stein Keller Schubert Baumann Ziegler Brandt Sauer Kreutz Bergmeister Andbert
 			}
-			regnal_first_names_male = {
-				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
 			}
 			regnal_second_names = {
@@ -428,12 +384,7 @@
 
 		names5 = {
 			weight = 15
-			first_names_male = {
-				Chloe Inés Manon Camille Clara Juliette Clémence Jeanne Charlotte Marie Nina Julia Elise Justine Yasmine Elina Andrea
-				Eleonore Clarisse Fanny Selma Leila Veronique Sophie Helena Daphne Suzanne Melanie Bernadette Maud Angeline Celine Jessica
-				Pauline Viviane Jeanette
-			}
-			first_names_female = {
+			first_names = {
 				Chloe Inés Manon Camille Clara Juliette Clémence Jeanne Charlotte Marie Nina Julia Elise Justine Yasmine Elina Andrea
 				Eleonore Clarisse Fanny Selma Leila Veronique Sophie Helena Daphne Suzanne Melanie Bernadette Maud Angeline Celine Jessica
 				Pauline Viviane Jeanette
@@ -443,10 +394,7 @@
 				Morin Lavoie Fortin Gagne Duval Hébert "Le Gall" "Le Roux" Deville Gerard Duchaine Jauvin Gilbert Bergeron Paquette
 				Pelletier Rémy Giroud Bosquet "de Castelnau" "de Montaignac" Lebouef Péllissier Deveraux
 			}
-			regnal_first_names_male = {
-				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
 			}
 			regnal_second_names = {
@@ -456,11 +404,7 @@
 
 		names6 = {
 			weight = 15
-			first_names_male = {
-				Haruna Sakura Misaki Aoi Mihane Miyu Rin Nanami Yui Hina Honoka Riko Yuna Koharu Hinata Mei Saki Ichika Hiyori Yusuki
-				Shiori Natsuki Ayane Kaho Hana Momoka Himari Yume Aomame Noriko Kazumi Kimiko
-			}
-			first_names_female = {
+			first_names = {
 				Haruna Sakura Misaki Aoi Mihane Miyu Rin Nanami Yui Hina Honoka Riko Yuna Koharu Hinata Mei Saki Ichika Hiyori Yusuki
 				Shiori Natsuki Ayane Kaho Hana Momoka Himari Yume Aomame Noriko Kazumi Kimiko
 			}
@@ -469,10 +413,7 @@
 				Inoue Kimura Shimizu Hayashi Saito Yamazaki Nakajima Mori Abe Ikeda Hashimoto Ishikawa Yamashita Ogawa Ishii Hasegawa
 				Goto Okada Fujita Sakamoto Murakami Nishimura Nakagawa Harada Okamoto Miura Takaya Amano Higuchi Ota
 			}
-			regnal_first_names_male = {
-				Nukatabe Toyomike Takara Niinomi Hidaka Takama Okiko Toshiko
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Nukatabe Toyomike Takara Niinomi Hidaka Takama Okiko Toshiko
 			}
 			regnal_second_names = {
@@ -482,11 +423,7 @@
 
 		names7 = {
 			weight = 15
-			first_names_male = {
-				Saanvi Aanya Aadhya Aaradhya Ananya Pari Anika Navya Diya Avani Myra Ira Aahana Anvi Prisha Riya Aarohi Anaya Akshara
-				Shanaya Kyra Siya Priyanka Divya Mahima Shivangi Juvina Anoushka Anushri Apoorva Sanjana
-			}
-			first_names_female = {
+			first_names = {
 				Saanvi Aanya Aadhya Aaradhya Ananya Pari Anika Navya Diya Avani Myra Ira Aahana Anvi Prisha Riya Aarohi Anaya Akshara
 				Shanaya Kyra Siya Priyanka Divya Mahima Shivangi Juvina Anoushka Anushri Apoorva Sanjana
 			}
@@ -495,10 +432,7 @@
 				Kulkarni Dodamani Patil Gupta Sharma Namboodiri Pannikar Potti Kutty Varma Sondharam Sooriyaprakash Chandran Vijay
 				Venktaesan Puttappa
 			}
-			regnal_first_names_male = {
-				Saanvi Aanya Aadhya Aaradhya Ananya Priyanka Divya Mahima Shivangi
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Saanvi Aanya Aadhya Aaradhya Ananya Priyanka Divya Mahima Shivangi
 			}
 			regnal_second_names = {
@@ -508,12 +442,7 @@
 
 		names8 = {
 			weight = 25
-			first_names_male = {
-				Hortensia Isabel Valentina Alejandra Alicia Antonia Carla Carmen Catalina Dolores Estefania Eva Fernanda Florencia
-				Gabriela Grizelda Maria Lorena Magdalena Mercedes Miriam Paulina Sofia Yolanda Camila Luciana Valeria Mariana Daniela
-				Martina Julieta Antonella Renata Agustina Constanza Fabiana
-			}
-			first_names_female = {
+			first_names = {
 				Hortensia Isabel Valentina Alejandra Alicia Antonia Carla Carmen Catalina Dolores Estefania Eva Fernanda Florencia
 				Gabriela Grizelda Maria Lorena Magdalena Mercedes Miriam Paulina Sofia Yolanda Camila Luciana Valeria Mariana Daniela
 				Martina Julieta Antonella Renata Agustina Constanza Fabiana
@@ -523,10 +452,7 @@
 				Ramirez Mendez Perez Vasquez Ruiz Aguera Alonso Batista Esguerra Flores "de la Guardia" "de la Cruz" "de la Vega"
 				"de Vargas" Ibanez Moralez Riveros Rosario Velazco Torres Quesada Saldana Salazar Ortega Ortiz Solano Romero
 			}
-			regnal_first_names_male = {
-				Alicia Antonia Carla Carmen Catalina Dolores Martina Julieta Antonella Renata
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Alicia Antonia Carla Carmen Catalina Dolores Martina Julieta Antonella Renata
 			}
 			regnal_second_names = {
@@ -536,11 +462,7 @@
 
 		names9 = {
 			weight = 15
-			first_names_male = {
-				Alma Amani Amira Aisha Fatima Hala Hana Hasti Imani Jana Jaliyah Jazmin Jenna Kaliyah Layan Leen Leila Lydia Malak Maryam
-				Maritza Mina Naima Noor Salma Samira Sanaa Yesenia Zahra Satayesh Zeinab Reihaneh Mobina Narges Ma'soumeh Sakineh Aya
-			}
-			first_names_female = {
+			first_names = {
 				Alma Amani Amira Aisha Fatima Hala Hana Hasti Imani Jana Jaliyah Jazmin Jenna Kaliyah Layan Leen Leila Lydia Malak Maryam
 				Maritza Mina Naima Noor Salma Samira Sanaa Yesenia Zahra Satayesh Zeinab Reihaneh Mobina Narges Ma'soumeh Sakineh Aya
 			}
@@ -549,10 +471,7 @@
 				Bakir Hussein al-Hazmi al-Bishi El-Baz Ibrahim Ishak Ismail El-Farouk Hassan El-Ghazali Bilal Nadir Juhani Jawahir Hamidi
 				al-Jazari al-Samarrai Salman Qasim Qudsi Qaderi al-Qadi Farrokhzad Madani Sassani Turani Khadem Ghorbani Jamshidi Rahimi
 			}
-			regnal_first_names_male = {
-				Zeinab Reihaneh Mobina Narges Ma'soumeh Sakineh Aya Alma Amani Amira
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Zeinab Reihaneh Mobina Narges Ma'soumeh Sakineh Aya Alma Amani Amira
 			}
 			regnal_second_names = {
@@ -562,13 +481,7 @@
 
 		names10 = {
 			weight = 15
-			first_names_male = {
-				Asha Abla Adhra Adila Aeeshah Afiya Chausiku Eshe Furaha Imani Kamaria Marjani Mchumba Mwanajuma Nia Nuru Sanaa Sauda Subira
-				Zuri Aizivaishe Anatswanashe Anodiwa Anokosha Awande Bokang Bongani Dikeledi Edzai Fikile Gugu Kagiso Keneuwe Koketso Langalibalele
-				Lerato Lindidwe Litsoanelo Lulama Majobo Maletsatsi Matshediso Mbali Mmaabo Mncedisi Mohau Moratuoa Muambiwa Nnyadzeni Nofoto
-				Nthati Ntsebo Ntswaki Phathu Reneilwe Rudzani Shandu Sinethemba Sizani Thanduxolo Tshanduko Tungu Zinhle
-			}
-			first_names_female = {
+			first_names = {
 				Asha Abla Adhra Adila Aeeshah Afiya Chausiku Eshe Furaha Imani Kamaria Marjani Mchumba Mwanajuma Nia Nuru Sanaa Sauda Subira
 				Zuri Aizivaishe Anatswanashe Anodiwa Anokosha Awande Bokang Bongani Dikeledi Edzai Fikile Gugu Kagiso Keneuwe Koketso Langalibalele
 				Lerato Lindidwe Litsoanelo Lulama Majobo Maletsatsi Matshediso Mbali Mmaabo Mncedisi Mohau Moratuoa Muambiwa Nnyadzeni Nofoto
@@ -581,10 +494,7 @@
 				Msibi Ngobese Ngema Masuku Khonjwayo Khumalo Kwayi Mambi Mbanjwa Mkhwemte Mtakwenda Ngwanya Nkwali Thwane Skhosana Tshangisa
 				Tshonyane Xhamela Xoko Zangwa Ndungwane Bhukhwana Dzana Gatyeni Gxarha Jwarha Khawuta
 			}
-			regnal_first_names_male = {
-				Kagiso Keneuwe Koketso Langalibalele Ntsebo Ntswaki Phathu Reneilwe Rudzani Shandu
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Kagiso Keneuwe Koketso Langalibalele Ntsebo Ntswaki Phathu Reneilwe Rudzani Shandu
 			}
 			regnal_second_names = {
@@ -594,12 +504,7 @@
 
 		names11 = {
 			weight = 15
-			first_names_male = {
-				Maria Anna Guiseppina Rosa Angela Giovanna Teresa Lucia Carmela Caterina Francesca Antonietta Carla Elena Concetta Rita
-				Margherita Franca Paola Vittoria Arianna Orietta Nicoletta Clara Stefania Gisella Claudia Lorenza Gabriella Isabella Valeria
-				Lucrezia Dina Benedetta Pietra
-			}
-			first_names_female = {
+			first_names = {
 				Maria Anna Guiseppina Rosa Angela Giovanna Teresa Lucia Carmela Caterina Francesca Antonietta Carla Elena Concetta Rita
 				Margherita Franca Paola Vittoria Arianna Orietta Nicoletta Clara Stefania Gisella Claudia Lorenza Gabriella Isabella Valeria
 				Lucrezia Dina Benedetta Pietra
@@ -610,10 +515,7 @@
 				Balletti Bianconelli Antonelli Corsini D'Alessandro D'Agostino "De Rosa" "De Sciglio" "Di Chiara" "Di Bartolomei" Delvecchio
 				"Del Grosso" D'Antoni Fazio "Di Bella" "Di Gennaro" Fabbrini Gambadori Galvani Marchetti Mazzitelli Olivieri Pacini Quadrini
 			}
-			regnal_first_names_male = {
-				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
-			}
-			regnal_first_names_female = {
+			regnal_first_names = {
 				Theodora Fatima Miranda Cordelia Svetlana Anastasia Valentina Henrietta
 			}
 			regnal_second_names = {

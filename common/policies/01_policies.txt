@@ -1,16 +1,3 @@
-##########################################################################
-# Empire Policies
-#
-# #####
-#
-# AI:
-# Base AI-weight is 100, if unchanged
-# AI will grab whatever policy-option has the highest weight
-#
-# #####
-#
-##########################################################################
-
 slavery = {
 	potential = {
 		always = yes
@@ -18,6 +5,10 @@ slavery = {
 
 	option = {
 		name = "slavery_not_allowed"
+
+		potential = {
+			NOT = {	has_trait = natural_slavers }
+		}
 
 		on_enabled = {
 			custom_tooltip = "ALL_POPS_EMANCIPATED"
@@ -42,6 +33,7 @@ slavery = {
 					has_ethic = "ethic_individualist"
 				}
 				NOR = {
+					has_trait = natural_slavers
 					has_ethic = "ethic_fanatic_xenophobe"
 					has_ethic = "ethic_xenophobe"
 				}
@@ -68,8 +60,16 @@ slavery = {
 			"tech_ethical_equations"
 		}
 
+		potential = {
+			OR = {
+				has_trait = natural_slavers
+				num_communications > 0
+			}
+		}
+
 		valid = {
 			OR = {
+				has_trait = natural_slavers
 				has_ethic = "ethic_xenophobe"
 				has_ethic = "ethic_fanatic_xenophobe"
 			}
@@ -95,6 +95,7 @@ slavery = {
 				OR = {
 					has_ethic = "ethic_fanatic_collectivist"
 					has_ethic = "ethic_collectivist"
+					has_trait = natural_slavers
 				}
 			}
 			modifier = {
@@ -115,17 +116,17 @@ slavery = {
 			modifier = {
 				add = -0.05
 				pop_has_ethic = "ethic_individualist"
-				OR = {
-					NOT = { pop_has_trait = trait_decadent }
-					NOT = { pop_has_trait = natural_slavers }
+				NOT = {
+					pop_has_trait = trait_decadent
+					pop_has_trait = natural_slavers
 				}
 			}
 			modifier = {
 				add = -0.1
 				pop_has_ethic = "ethic_fanatic_individualist"
-				OR = {
-					NOT = { pop_has_trait = trait_decadent }
-					NOT = { pop_has_trait = natural_slavers }
+				NOT = {
+					pop_has_trait = trait_decadent
+					pop_has_trait = natural_slavers
 				}
 			}
 		}
@@ -134,8 +135,19 @@ slavery = {
 	option = {
 		name = "slavery_allowed_xenos_only"
 
+		prerequisites = {
+			"tech_ethical_equations"
+		}
+
+		potential = {
+			OR = {
+				has_trait = natural_slavers
+				num_communications > 0
+			}
+		}
 		valid = {
 			OR = {
+				has_trait = natural_slavers
 				has_ethic = "ethic_xenophobe"
 				has_ethic = "ethic_fanatic_xenophobe"
 			}
@@ -163,6 +175,7 @@ slavery = {
 				OR = {
 					has_ethic = "ethic_fanatic_xenophobe"
 					has_ethic = "ethic_xenophobe"
+					has_trait = natural_slavers
 				}
 			}
 		}
@@ -172,9 +185,9 @@ slavery = {
 			modifier = {
 				add = -0.05
 				pop_has_ethic = "ethic_xenophile"
-				OR = {
-					NOT = { pop_has_trait = trait_decadent }
-					NOT = { pop_has_trait = natural_slavers }
+				NOT = {
+					pop_has_trait = trait_decadent
+					pop_has_trait = natural_slavers
 				}
 				owner = {
 					is_same_species = ROOT
@@ -183,9 +196,9 @@ slavery = {
 			modifier = {
 				add = -0.1
 				pop_has_ethic = "ethic_fanatic_xenophile"
-				OR = {
-					NOT = { pop_has_trait = trait_decadent }
-					NOT = { pop_has_trait = natural_slavers }
+				NOT = {
+					pop_has_trait = trait_decadent
+					pop_has_trait = natural_slavers
 				}
 				owner = {
 					is_same_species = ROOT
@@ -194,9 +207,9 @@ slavery = {
 			modifier = {
 				add = -0.05
 				pop_has_ethic = "ethic_collectivist"
-				OR = {
-					NOT = { pop_has_trait = trait_decadent }
-					NOT = { pop_has_trait = natural_slavers }
+				NOT = {
+				  pop_has_trait = trait_decadent
+				  pop_has_trait = natural_slavers
 				}
 				owner = {
 					NOT = { is_same_species = ROOT }
@@ -208,6 +221,7 @@ slavery = {
 					pop_has_ethic = "ethic_collectivist"
 					pop_has_ethic = "ethic_fanatic_collectivist"
 					pop_has_trait = trait_decadent
+					pop_has_trait = natural_slavers
 				}
 				owner = {
 					NOT = { is_same_species = ROOT }
@@ -270,18 +284,12 @@ slavery = {
 			modifier = {
 				add = -0.05
 				pop_has_ethic = "ethic_individualist"
-				OR = {
-  				NOT = { pop_has_trait = trait_decadent }
-  				NOT = { pop_has_trait = natural_slavers }
-				}
+				NOT = { pop_has_trait = trait_decadent }
 			}
 			modifier = {
 				add = -0.1
 				pop_has_ethic = "ethic_fanatic_individualist"
-				OR = {
-				  NOT = { pop_has_trait = trait_decadent }
-				  NOT = { pop_has_trait = natural_slavers }
-				}
+				NOT = { pop_has_trait = trait_decadent }
 			}
 		}
 	}
@@ -336,18 +344,12 @@ slavery = {
 			modifier = {
 				add = -0.05
 				pop_has_ethic = "ethic_individualist"
-				OR = {
-				  NOT = { pop_has_trait = trait_decadent }
-				  NOT = { pop_has_trait = natural_slavers }
-				}
+				NOT = { pop_has_trait = trait_decadent }
 			}
 			modifier = {
 				add = -0.1
 				pop_has_ethic = "ethic_fanatic_individualist"
-				OR = {
-				  NOT = { pop_has_trait = trait_decadent }
-				  NOT = { pop_has_trait = natural_slavers }
-				}
+				NOT = { pop_has_trait = trait_decadent }
 			}
 		}
 	}
