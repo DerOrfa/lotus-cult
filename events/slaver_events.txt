@@ -1,5 +1,44 @@
 namespace = slaver
 
+#create docile slaves faction and pop pop in
+pop_event = {
+	id = "slaver.10"
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			if = {
+			  # find existing docile faction
+				limit = {
+					any_owned_pop = {
+						exists = pop_faction
+						pop_faction = { is_pop_faction_type = docile_slaves }
+					}
+				}
+				random_pop_faction = {
+					limit = { is_pop_faction_type = docile_slaves }
+					save_event_target_as = docile_faction
+				}
+				root = {set_pop_faction = event_target:docile_faction}
+
+				else = {
+					# Create docile Slaves pop faction and put me in
+					root = {
+						owner = {
+							create_pop_faction = {
+								type = docile_slaves
+								parameter:owner_empire = this
+								pop = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 pop_event = {
 		id = "slaver.100"
 		hide_window = yes
@@ -53,6 +92,7 @@ pop_event = {
 			random_pop = {
 				limit = { not = {is_same_species = ROOT } }
 				pop_event = {id=slaver.100}
+				pop_event = {id=slaver.10}
 			}
 		}
 	}
@@ -128,6 +168,7 @@ event = {
 				every_owned_pop = { #and enslave them
 					limit = { is_species = Servants }
 					pop_event = {id = slaver.100}
+					pop_event = {id = slaver.10}
 				}
 			}
 		}
