@@ -1,6 +1,6 @@
 mindless_shells = {
 	lose_support_on_pop_leave = yes
-
+	support_multiplier = 0.1
 	#country scope
 	is_potential = {
 		any_owned_pop = {
@@ -22,7 +22,7 @@ mindless_shells = {
 	can_create = {	#this trigger is evaluated after parameters are initialized and a #pop is considering what faction to join or create. If this evaluates to true the #pop will calculate its attraction to this potential faction
 		always = yes
 	}
-	
+
 	parameters = {
 		owner_country = {
 			type = country
@@ -32,7 +32,7 @@ mindless_shells = {
 		}
 	}
 
-	
+
 	#pop faction scope
 	on_create = {	#an effect that is executed immediately after the faction has #been created. Faction will have one pop ( if created with a pop )
 		set_name = random
@@ -66,7 +66,7 @@ mindless_shells = {
 	}
 
 
-	
+
 #	demand = {
 #		#min_support = 0.1
 #		#max_support = 0.9
@@ -93,7 +93,7 @@ mindless_shells = {
 #		# 	}
 #		# }
 #	}
-	
+
 	attraction = {#executed with a pop scope, country is stored in root, faction is stored in from
 		base = 0
 		modifier = {
@@ -101,7 +101,7 @@ mindless_shells = {
 			has_ethic = ethic_mindless
 		}
 	}
-	
+
 #	actions = {
 #		bribe_leaders = {
 #			title = "FACTION_ACTION_BRIBE_LEADERS"
@@ -141,15 +141,15 @@ mindless_shells = {
 #			}
 #		}
 #	}
-	
+
 #	support_effects = {
 #		rebel = {
 #			title = SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY
 #			min_support = 0.5
 #			#max_support = 1.0
-#			
-#			spawn_chance = { 
-#				value = 10 
+#
+#			spawn_chance = {
+#				value = 10
 #			}
 #			effect = {
 #				owner = {
@@ -160,7 +160,7 @@ mindless_shells = {
 #							species = owner
 #							ethos = {
 #								ethic = "ethic_xenophobe"
-#								ethic = "ethic_militarist"			
+#								ethic = "ethic_militarist"
 #							}
 #							flag = random
 #						}

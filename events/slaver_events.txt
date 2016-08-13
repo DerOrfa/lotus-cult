@@ -1,6 +1,6 @@
 namespace = slaver
 
-#create docile slaves faction and pop pop in
+#put pop in docile slaves faction, create if needed
 pop_event = {
 	id = "slaver.10"
 	hide_window = yes
@@ -10,12 +10,7 @@ pop_event = {
 		owner = {
 			if = {
 			  # find existing docile faction
-				limit = {
-					any_owned_pop = {
-						exists = pop_faction
-						pop_faction = { is_pop_faction_type = docile_slaves }
-					}
-				}
+				limit = {has_faction =  docile_slaves}
 				random_pop_faction = {
 					limit = { is_pop_faction_type = docile_slaves }
 					save_event_target_as = docile_faction
@@ -39,12 +34,14 @@ pop_event = {
 	}
 }
 
+#break a pop
 pop_event = {
 		id = "slaver.100"
 		hide_window = yes
 		is_triggered_only = yes
 
 		trigger = {
+			is_sentient = yes
 			not = {has_trait = natural_slavers} #don't enslave yourself
 		}
 
@@ -159,7 +156,6 @@ event = {
 							has_resource = {  type = energy amount = 1 }
 						}
 					}
-
 					create_pop = {
 						species = Servants
 					}
