@@ -4,13 +4,13 @@ mindless_shells = {
 	#country scope
 	is_potential = {
 		any_owned_pop = {
-			has_ethic = ethic_mindless
+			has_modifier = pop_mindless
 		}
 	}
 #	#pop faction scope
 	valid = {			#This trigger is checked once per day for existing factions. #If false the faction will be removed
 		any_owned_pop = {
-			has_ethic = ethic_mindless
+			has_modifier = pop_mindless
 		}
 	}
 	is_dangerous = {
@@ -41,7 +41,7 @@ mindless_shells = {
 	on_set_leader = { # Effect that executes when a faction wants a leader, pop #faction scope, having it empty will have default behavior
 		owner = {
 			random_owned_pop = {
-				limit = { has_ethic = ethic_mindless }
+				limit = { has_modifier = pop_mindless }
 				species = {
 					root = {
 						owner = {
@@ -98,7 +98,7 @@ mindless_shells = {
 		base = 0
 		modifier = {
 			add = 200
-			has_ethic = ethic_mindless
+			has_modifier = pop_mindless
 		}
 	}
 

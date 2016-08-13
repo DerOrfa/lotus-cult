@@ -185,13 +185,13 @@ malcontent_slaves = {
 				is_species = "ROBOT_POP_SPECIES_1"
 				is_species = "ROBOT_POP_SPECIES_2"
 				#is_species = "ROBOT_POP_SPECIES_3"
-				pop_has_ethic = ethic_mindless
+				has_modifier = pop_mindless
 			}
 		}
 		# broken slaves
 		modifier = {
 			factor = 0.05
-			pop_has_ethic = ethic_broken
+			has_modifier = pop_broken
 		}
 	}
 

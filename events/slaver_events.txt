@@ -42,7 +42,8 @@ pop_event = {
 
 		trigger = {
 			is_sentient = yes
-			not = {has_trait = natural_slavers} #don't enslave yourself
+			not = {has_trait = natural_slavers} #do not enslave yourself
+			not = {has_modifier = pop_mindless} # do not enslave already mindless pops
 		}
 
 
@@ -57,12 +58,18 @@ pop_event = {
 			pop_remove_ethic = ethic_fanatic_materialist
 
 			if = {
-				limit = { has_ethic = ethic_broken }
-				pop_remove_ethic =  ethic_broken
-				pop_add_ethic = ethic_mindless
+				limit = { has_modifier = pop_broken }
+				remove_modifier = pop_broken
+				add_modifier = {
+					modifier = pop_mindless
+					days = 2880 # 8 years
+				}
 				break = yes
 			}
-			pop_add_ethic =  ethic_broken
+			add_modifier = {
+				modifier = pop_broken
+				days = 1440 # 4 years
+			}
 		}
 }
 
