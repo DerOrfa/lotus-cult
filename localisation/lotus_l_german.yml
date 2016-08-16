@@ -1,0 +1,7 @@
+﻿l_german:
+ natural_slavers:0 "Gebohrene Versklaver"
+ natural_slavers_desc:0 "Diese Spezies ist in der Lage den Willen jedes intelligenten Lebewesens zu brechen. Dies ist ein unbewusster natürlicher Vorgang. Sodass jeder der auf dem selben Planeten lebt unweigerlich irgendwann als lebender Zombi endet"
+ pop_broken:0 "Gebrochener Wille"
+ pop_mindless:0 "Willenlos"
+ pft_mindless_shells:0 "Seelenlose Hüllen"
+ pft_mindless_shells_desc:0 "Diesen Leuten wurde zu oft im Kopf herumgepfuscht. Sie haben die Fähigkeit zum selbstständigen Denken verlohren. Obwohl sie offensichtlich harmlos für ihre Umgebung sind, vergessen manchmal grundlegende Dinge wie Essen oder Schlafen"
