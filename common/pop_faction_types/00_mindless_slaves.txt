@@ -1,6 +1,6 @@
 mindless_shells = {
 	lose_support_on_pop_leave = yes
-	support_multiplier = 0.1
+#	support_multiplier = 0.5
 	#country scope
 	is_potential = {
 		any_owned_pop = {
@@ -14,7 +14,7 @@ mindless_shells = {
 		}
 	}
 	is_dangerous = {
-		support > 0.24
+		support > 0.5
 		any_support_effect_chance > 0.01
 	}
 
@@ -65,35 +65,6 @@ mindless_shells = {
 		}
 	}
 
-
-
-#	demand = {
-#		#min_support = 0.1
-#		#max_support = 0.9
-#		title = POP_FACTION_XENOSLAVER_DEMAND_TITLE_1 # title string is run directly #in pop faction scope. To get country name, [Owner.GetName], no root.
-#		potential = {
-#			# Potential determines if a demand can be fulfilled. If it cannot be #fulfilled, it will not be considered valid or even displayed.
-#			custom_tooltip = {
-#				text = POP_FACTION_SEPARATISTS_DEMAND_DESC_1 # tooltip string uses a #regular event-style scope. [Root.Owner.GetName] to get country name.
-#				owner = {
-#					energy > 100
-#				}
-#			}
-#		}
-#		# effect = { #executed with a pop_faction scope
-#		# 	custom_tooltip = POP_FACTION_SEPARATISTS_DEMAND_EFFECT_DESC_1
-#		# 	hidden_effect = {
-#		# 		parameter:planet = {
-#		# 			create_country = {
-#		# 				type = default
-#		# 				species = owner
-#		# 				day_zero_contact = no
-#		# 			}
-#		# 		}
-#		# 	}
-#		# }
-#	}
-
 	attraction = {#executed with a pop scope, country is stored in root, faction is stored in from
 		base = 0
 		modifier = {
@@ -101,78 +72,4 @@ mindless_shells = {
 			has_modifier = pop_mindless
 		}
 	}
-
-#	actions = {
-#		bribe_leaders = {
-#			title = "FACTION_ACTION_BRIBE_LEADERS"
-#			description = "FACTION_ACTION_BRIBE_LEADERS_DESC"
-#			potential = {
-#				always = yes
-#			}
-#			valid = {
-#				owner = {
-#					energy > 99
-#				}
-#			}
-#			effect = {
-#				owner = {
-#					add_energy = -100
-#				}
-#			}
-#			ai_weight = { 			# scope = pop_faction / from = country
-#				weight = 50			# default = 100
-#				modifier = {
-#					weight = 50		# replace base weight
-#					AND = {
-#						# militancy < 0.2
-#						support < 0.6
-#						support > 0.2
-#					}
-#				}
-#				modifier = {
-#					factor = 2		# multiply by 2
-#					from = {
-#						OR = {
-#							has_ethic = "ethic_fanatic_xenophobe"
-#							has_ethic = "ethic_xenophobe"
-#						}
-#					}
-#				}
-#			}
-#		}
-#	}
-
-#	support_effects = {
-#		rebel = {
-#			title = SUPPORT_EFFECT_XENOSLAVER_SLAVER_CONFEDERACY
-#			min_support = 0.5
-#			#max_support = 1.0
-#
-#			spawn_chance = {
-#				value = 10
-#			}
-#			effect = {
-#				owner = {
-#					capital_scope = {
-#						create_rebels = {
-#							name = "Tarakan Empire"
-#							government = despotic_empire
-#							species = owner
-#							ethos = {
-#								ethic = "ethic_xenophobe"
-#								ethic = "ethic_militarist"
-#							}
-#							flag = random
-#						}
-#						create_army = {
-#							name = "Invading Horde"
-#							owner = last_created
-#							species = owner
-#							type = "assault_army"
-#						}
-#					}
-#				}
-#			}
-#		}
-#	}
 }
