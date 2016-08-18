@@ -42,8 +42,13 @@ pop_event = {
 
 		trigger = {
 			is_sentient = yes
-			not = {has_trait = natural_slavers} #do not enslave yourself
-			not = {has_modifier = pop_mindless} # do not enslave already mindless pops
+			NOR = {
+				has_trait = natural_slavers # natural_slavers are immune
+				has_modifier = pop_mindless # do not enslave already mindless pops
+				is_species = "ROBOT_POP_SPECIES_1" # natural_slavers only work on biological live
+				is_species = "ROBOT_POP_SPECIES_2"
+				is_species = "ROBOT_POP_SPECIES_3"
+			}
 		}
 
 
@@ -56,6 +61,8 @@ pop_event = {
 			pop_remove_ethic = ethic_fanatic_militarist
 			pop_remove_ethic = ethic_fanatic_pacifist
 			pop_remove_ethic = ethic_fanatic_materialist
+
+			pop_event = {id=slaver.10}
 
 			if = {
 				limit = { has_modifier = pop_broken }
@@ -96,7 +103,6 @@ pop_event = {
 			random_pop = {
 				limit = { not = {is_same_species = ROOT } }
 				pop_event = {id=slaver.100}
-				pop_event = {id=slaver.10}
 			}
 		}
 	}
@@ -148,8 +154,6 @@ event = {
 					traits = {
 						trait=trait_presentient_proles
 						trait=trait_strong
-#						trait=trait_agrarian
-#						trait=trait_repugnant
 					}
 				}
 				every_tile = {
@@ -171,7 +175,6 @@ event = {
 				every_owned_pop = { #and enslave them
 					limit = { is_species = Servants }
 					pop_event = {id = slaver.100}
-					pop_event = {id = slaver.10}
 				}
 			}
 		}

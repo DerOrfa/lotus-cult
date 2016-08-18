@@ -7,7 +7,7 @@ mindless_shells = {
 			has_modifier = pop_mindless
 		}
 	}
-#	#pop faction scope
+	#pop faction scope
 	valid = {			#This trigger is checked once per day for existing factions. #If false the faction will be removed
 		any_owned_pop = {
 			has_modifier = pop_mindless
@@ -32,11 +32,45 @@ mindless_shells = {
 		}
 	}
 
+	demand = {
+		title = POP_FACTION_MINDLESS_SLAVES_DEMAND_TITLE_1
+		desc = POP_FACTION_MINDLESS_SLAVES_DEMAND_DESC_1
+		max_support = 1
+
+		potential = {
+			custom_tooltip_fail = {
+				text = mindless_slaves_demand_fulfilled
+				owner = {
+					NOT = {
+						has_policy_flag = mind_control_regulated
+					}
+				}
+			}
+		}
+	}
 
 	#pop faction scope
 	on_create = {	#an effect that is executed immediately after the faction has #been created. Faction will have one pop ( if created with a pop )
-		set_name = random
+		set_name = "Mindless Shells"
 	}
+
+	flag = {
+		icon = {
+			category = "human"
+			file = "flag_human_11.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors={
+			"red"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+
 	#pop faction scope
 	on_set_leader = { # Effect that executes when a faction wants a leader, pop #faction scope, having it empty will have default behavior
 		owner = {
@@ -70,6 +104,120 @@ mindless_shells = {
 		modifier = {
 			add = 200
 			has_modifier = pop_mindless
+		}
+	}
+	support_effects = {
+		fertility_crisis = {
+			title = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS
+			min_support = 0.25
+			max_support = 1
+
+			spawn_chance = {
+				base = 10
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+								save_event_target_as = crisis_planet
+							}
+						}
+					}
+					event_target:crisis_planet = {
+						every_pop = {
+							limit = {
+								exists = pop_faction
+								pop_faction = { is_same_value = root }
+							}
+							add_modifier = {
+								modifier = mindess_slaves_fertility_crisis_modifier
+								days = 1440 # 4 years
+							}
+						}
+					}
+					pop_faction_event = { id = mindless.10 }
+					add_support = -0.15
+				}
+			}
+		}
+		eating_crisis = {
+			title = POP_FACTION_MINDESS_SLAVES_EATING_CRISIS
+			min_support = 0.5
+			max_support = 1
+
+			spawn_chance = {
+				base = 10
+			}
+
+			effect = {
+				custom_tooltip = POP_FACTION_MINDESS_SLAVES_EATING_CRISIS_DESC
+				hidden_effect = {
+					owner = {
+						if = {
+							limit = {
+								any_owned_planet = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+							}
+							random_owned_planet = {
+								limit = {
+									count_pops = {
+										limit = {
+											exists = pop_faction
+											pop_faction = { is_same_value = root }
+										}
+										count > 3
+									}
+								}
+								save_event_target_as = crisis_planet
+							}
+						}
+					}
+					event_target:crisis_planet = {
+						every_pop = {
+							limit = {
+								exists = pop_faction
+								pop_faction = { is_same_value = root }
+							}
+							add_modifier = {
+								modifier = mindess_slaves_eating_crisis_modifier
+								days = 90 # 3 MON
+							}
+						}
+					}
+					pop_faction_event = { id = mindless.15 }
+					add_support = -0.15
+				}
+			}
 		}
 	}
 }

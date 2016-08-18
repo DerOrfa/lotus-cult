@@ -1,0 +1,317 @@
+namespace = mindless
+
+# Mindless slaves don't procreate
+pop_faction_event = {
+	id = mindless.10
+	title = mindless.10.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_collectivist = { text = mindless.10.desc.colle }
+					ethic_collectivist = { text = mindless.10.desc.colle }
+					default = { text = mindless.10.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_smugglers_in_bar
+	show_sound = event_conversation
+	location = event_target:crisis_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+pop_faction_event = {
+	id = mindless.15
+	title = mindless.15.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_collectivist = { text = mindless.15.desc.colle }
+					ethic_collectivist = { text = mindless.15.desc.colle }
+					default = { text = mindless.15.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_smugglers_in_bar
+	show_sound = event_conversation
+	location = event_target:crisis_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+#########################
+# Malcontent Slaves Faction
+# id 50 - 79
+#########################
+
+# Interstellar Railroad, 1-5 slaves are removed
+pop_faction_event = {
+	id = faction.50
+	title = faction.50.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_collectivist = { text = faction.50.desc.colle }
+					ethic_collectivist = { text = faction.50.desc.colle }
+					default = { text = faction.50.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_unknown_ships
+	show_sound = event_ship_thrusters
+	location = root.owner.capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = faction.50.a
+		custom_tooltip = faction.50.5.tooltip
+		trigger = {
+			owner = {
+				has_country_flag = 5_railroaded
+			}
+		}
+		hidden_effect = {
+			owner = {
+				remove_country_flag = 5_railroaded
+			}
+		}
+	}
+
+	option = {
+		name = faction.50.a
+		custom_tooltip = faction.50.4.tooltip
+		trigger = {
+			owner = {
+				has_country_flag = 4_railroaded
+			}
+		}
+		hidden_effect = {
+			owner = {
+				remove_country_flag = 4_railroaded
+			}
+		}
+	}
+
+	option = {
+		name = faction.50.a
+		custom_tooltip = faction.50.3.tooltip
+		trigger = {
+			owner = {
+				has_country_flag = 3_railroaded
+			}
+		}
+		hidden_effect = {
+			owner = {
+				remove_country_flag = 3_railroaded
+			}
+		}
+	}
+
+	option = {
+		name = faction.50.a
+		custom_tooltip = faction.50.1.tooltip
+		trigger = {
+			owner = {
+				has_country_flag = 1_railroaded
+			}
+		}
+		hidden_effect = {
+			owner = {
+				remove_country_flag = 1_railroaded
+			}
+		}
+	}
+}
+
+# Riots, building on riots_planet is ruined
+pop_faction_event = {
+	id = faction.55
+	title = faction.55.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_collectivist = { text = faction.55.desc.colle }
+					ethic_collectivist = { text = faction.55.desc.colle }
+					default = { text = faction.55.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_burning_settlement
+	show_sound = event_planetary_riot
+	location = event_target:riots_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Revolt on revolt_planet
+pop_faction_event = {
+	id = faction.60
+	title = faction.60.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_collectivist = { text = faction.60.desc.fcolle }
+					ethic_collectivist = { text = faction.60.desc.colle }
+					default = { text = faction.60.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_ground_combat
+	show_sound = event_planetary_riot
+	location = event_target:riots_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+#########################
+# Emancipation Faction
+# id 80 - 99
+#########################
+
+# Slaves radicalized
+pop_faction_event = {
+	id = faction.80
+	title = faction.80.title
+	desc = faction.80.desc
+	picture = GFX_evt_smugglers_in_bar
+	show_sound = event_conversation
+	#location = root.owner.capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+#########################
+# Planet Separatist Faction
+# id 100
+#########################
+
+# Planet Separatists rebel
+pop_faction_event = {
+	id = faction.100
+	title = faction.100.title
+	desc = faction.100.desc
+	picture = GFX_evt_galactic_senate
+	show_sound = event_planetary_riot
+	location = event_target:planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Planet Separatists Sabotage
+pop_faction_event = {
+	id = faction.101
+	title = faction.101.title
+	desc = faction.101.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_planetary_riot
+	location = event_target:planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+######################
+# Nationalist Faction
+# id 300
+######################
+
+# Nationalists sabotage
+pop_faction_event = {
+	id = faction.301
+	title = faction.301.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_xenophobe = { text = faction.301.desc.phobe }
+					ethic_xenophobe = { text = faction.301.desc.phobe }
+					ethic_fanatic_xenophile = { text = faction.301.desc.phile }
+					ethic_xenophile = { text = faction.301.desc.phile }
+					default = { text = faction.301.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_burning_settlement
+	show_sound = event_planetary_riot
+	location = event_target:planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Nationalists Rebels
+pop_faction_event = {
+	id = faction.302
+	title = faction.302.title
+	desc = {
+		trigger = {
+			hidden:owner = {
+				switch = {
+					trigger = has_ethic
+					ethic_fanatic_xenophobe = { text = faction.302.desc.phobe }
+					ethic_xenophobe = { text = faction.302.desc.phobe }
+					ethic_fanatic_xenophile = { text = faction.302.desc.phile }
+					ethic_xenophile = { text = faction.302.desc.phile }
+					default = { text = faction.302.desc }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_burning_settlement
+	show_sound = event_planetary_riot
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}

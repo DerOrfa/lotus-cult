@@ -24,3 +24,12 @@ pop_mindless = {
 	tile_resource_engineering_research_mult = -1
 	tile_resource_energy_mult = -0.2
 }
+
+mindess_slaves_fertility_crisis_modifier = {
+	pop_fertility = -0.75
+}
+mindess_slaves_eating_crisis_modifier = {
+	tile_resource_minerals_mult = -0.7
+	tile_resource_food_mult = -0.7
+	pop_food_req_mult = -0.8
+}
