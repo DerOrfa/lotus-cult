@@ -18,8 +18,6 @@ pop_faction_event = {
 	}
 	picture = GFX_evt_smugglers_in_bar
 	show_sound = event_conversation
-	location = event_target:crisis_planet
-
 	is_triggered_only = yes
 
 	option = {

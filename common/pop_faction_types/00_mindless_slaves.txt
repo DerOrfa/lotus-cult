@@ -126,43 +126,36 @@ mindless_shells = {
 				custom_tooltip = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS_DESC
 				hidden_effect = {
 					owner = {
-						if = {
-							limit = {
-								any_owned_planet = {
-									count_pops = {
-										limit = {
-											exists = pop_faction
-											pop_faction = { is_same_value = root }
-										}
-										count > 3
-									}
-								}
-							}
-							random_owned_planet = {
+#						if = {
+#							limit = {
+#								any_owned_planet = {
+#									count_pops = {
+#										limit = {
+#											exists = pop_faction
+#											pop_faction = { is_same_value = root }
+#										}
+#										count > 3
+#									}
+#								}
+#							}
+							every_owned_planet = {
 								limit = {
-									count_pops = {
+									every_pop = {
 										limit = {
 											exists = pop_faction
 											pop_faction = { is_same_value = root }
 										}
-										count > 3
+										every_pop = {
+											limit = {
+												is_growing = yes
+												is_same_species = FROM
+											}
+											kill_pop = yes
+										}
 									}
 								}
-								save_event_target_as = crisis_planet
 							}
-						}
-					}
-					event_target:crisis_planet = {
-						every_pop = {
-							limit = {
-								exists = pop_faction
-								pop_faction = { is_same_value = root }
-							}
-							add_modifier = {
-								modifier = mindess_slaves_fertility_crisis_modifier
-								days = 1440 # 4 years
-							}
-						}
+#						}
 					}
 					pop_faction_event = { id = mindless.10 }
 					add_support = -0.15
