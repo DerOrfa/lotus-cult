@@ -397,9 +397,9 @@ mind_control = {
 		}
 
 		valid = {
-			OR = {
-					has_ethic = "ethic_fanatic_xenophobe"
-					has_ethic = "ethic_xenophobe"
+			NOR = {
+					has_ethic = "ethic_fanatic_xenophile"
+					has_ethic = "ethic_xenophile"
 				}
 		}
 
@@ -408,6 +408,16 @@ mind_control = {
 			modifier = {
 				add = 0.05
 				pop_has_trait = natural_slavers
+			}
+			modifier = {
+				add = 0.05
+				pop_has_trait = natural_slavers
+				has_ethic = "ethic_xenophobe"
+			}
+			modifier = {
+				add = 0.10
+				pop_has_trait = natural_slavers
+				has_ethic = "ethic_fanatic_xenophobe"
 			}
 		}
 	}

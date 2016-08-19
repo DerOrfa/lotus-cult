@@ -1,6 +1,6 @@
 mindless_shells = {
-	lose_support_on_pop_leave = yes
-#	support_multiplier = 0.5
+	lose_support_on_pop_leave = no
+	support_multiplier = 0.5
 	#country scope
 	is_potential = {
 		any_owned_pop = {
@@ -105,6 +105,12 @@ mindless_shells = {
 			add = 200
 			has_modifier = pop_mindless
 		}
+		modifier = {
+			factor = 2
+			root = {
+				has_policy_flag = mind_control_encouraged
+			}
+		}
 	}
 	support_effects = {
 		fertility_crisis = {
@@ -113,7 +119,7 @@ mindless_shells = {
 			max_support = 1
 
 			spawn_chance = {
-				base = 10
+				base = 5
 			}
 
 			effect = {
@@ -169,7 +175,7 @@ mindless_shells = {
 			max_support = 1
 
 			spawn_chance = {
-				base = 10
+				base = 5
 			}
 
 			effect = {
