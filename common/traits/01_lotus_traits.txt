@@ -3,10 +3,11 @@ natural_slavers  = {
 	opposites = { "trait_repugnant" "trait_strong" "trait_very_strong" "trait_resilient" "trait_industrious" "trait_agrarian"}
 	modifier = {
 		tile_resource_society_research_mult = 0.25
-		pop_alien_slavery_tolerance = 2.0
-		pop_eff_wo_slaves = -0.2
+#		pop_alien_slavery_tolerance = 1 # useless as sector AI won't work with anything but collectivism anyway
+#		pop_eff_wo_slaves = -0.2 # leave that to trait_decadent for now
 		tile_resource_minerals_mult = -0.2
 		tile_resource_food_mult = -0.2
+		army_damage_mult = -0.20
 		pop_food_req_mult = 0.2
 	}
 	icon = "gfx/interface/icons/traits/trait_decadent.dds"
@@ -28,5 +29,5 @@ master_manipulator = {
 	}
 	leader_trait = yes
 	leader_class = { ruler }
-	requires_traits = { lotus }
+	requires_traits = { natural_slavers }
 }
