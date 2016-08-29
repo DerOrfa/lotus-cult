@@ -126,29 +126,20 @@ mindless_shells = {
 				custom_tooltip = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS_DESC
 				hidden_effect = {
 					owner = {
-						every_owned_planet = {
-							limit = { # that has at least 3 pop from the faction
-								count_pops = {
-									limit = {
-										exists = pop_faction
-										pop_faction = { is_same_value = root }
-									}
-									count > 3
-								}
+						every_owned_pop = {
+							limit = {
+								exists = pop_faction
+								pop_faction = { is_same_value = root }
 							}
-							every_owned_pop = { # for every pop in that faction
-								limit = {
-									exists = pop_faction
-									pop_faction = { is_same_value = root }
-								}
-								planet = { # kill all growing from same species on that planet
-									every_owned_pop = {
-										limit = {
-											is_growing = yes
-											is_same_species = FROMFROM
-										}
-										kill_pop = yes
+							planet = { # kill a growing from same species on that planet (as there is never more than one growing per species it's technically all pops)
+								planet_event = { id = mindless.11 }
+								random_pop = {
+									limit = {
+										is_growing = yes
+										is_same_species = FROMFROM
 									}
+									pop_event = { id = mindless.12 }
+									kill_pop = yes
 								}
 							}
 						}

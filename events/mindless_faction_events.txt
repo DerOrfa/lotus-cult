@@ -1,5 +1,31 @@
 namespace = mindless
 
+planet_event = {
+	id = mindless.11
+	title = mindless.11.title
+
+	picture = GFX_evt_smugglers_in_bar
+	show_sound = event_conversation
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+pop_event = {
+	id = mindless.12
+	title = mindless.12.title
+
+	picture = GFX_evt_smugglers_in_bar
+	show_sound = event_conversation
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
 # Mindless slaves don't procreate
 pop_faction_event = {
 	id = mindless.10
