@@ -1,6 +1,6 @@
 mindless_shells = {
 	lose_support_on_pop_leave = no
-	support_multiplier = 0.5
+#	support_multiplier = 0.5
 	#country scope
 	is_potential = {
 		any_owned_pop = {
@@ -102,7 +102,7 @@ mindless_shells = {
 	attraction = {#executed with a pop scope, country is stored in root, faction is stored in from
 		base = 0
 		modifier = {
-			add = 200
+			add = 150
 			has_modifier = pop_mindless
 		}
 		modifier = {
@@ -119,7 +119,7 @@ mindless_shells = {
 			max_support = 1
 
 			spawn_chance = {
-				base = 5
+				base = 10
 			}
 
 			effect = {
@@ -131,12 +131,12 @@ mindless_shells = {
 								exists = pop_faction
 								pop_faction = { is_same_value = root }
 							}
-							planet = { # kill a growing from same species on that planet (as there is never more than one growing per species it's technically all pops)
-								planet_event = { id = mindless.11 }
+							planet = { # kill a growing from same species on that planet 
+#								planet_event = { id = mindless.11 }
 								random_pop = {
 									limit = {
 										is_growing = yes
-										is_same_species = FROMFROM
+										is_same_species = prevprev
 									}
 									pop_event = { id = mindless.12 }
 									kill_pop = yes
