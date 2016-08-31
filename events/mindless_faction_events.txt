@@ -1,33 +1,6 @@
 namespace = mindless
 
-planet_event = {
-	id = mindless.11
-	title = mindless.11.title
-
-	picture = GFX_evt_smugglers_in_bar
-	show_sound = event_conversation
-	is_triggered_only = yes
-
-	option = {
-		name = OK
-	}
-}
-
 pop_event = {
-	id = mindless.12
-	title = mindless.12.title
-
-	picture = GFX_evt_smugglers_in_bar
-	show_sound = event_conversation
-	is_triggered_only = yes
-
-	option = {
-		name = OK
-	}
-}
-
-# Mindless slaves don't procreate
-pop_faction_event = {
 	id = mindless.10
 	title = mindless.10.title
 	desc = {
@@ -35,8 +8,8 @@ pop_faction_event = {
 			hidden:owner = {
 				switch = {
 					trigger = has_ethic
-					ethic_fanatic_collectivist = { text = mindless.10.desc.colle }
-					ethic_collectivist = { text = mindless.10.desc.colle }
+					ethic_fanatic_collectivist = { text = mindless.10.desc }
+					ethic_collectivist = { text = mindless.10.desc }
 					default = { text = mindless.10.desc }
 				}
 			}
@@ -51,7 +24,7 @@ pop_faction_event = {
 	}
 }
 
-# Mindless slaves don't eat
+# Mindless slaves forget to eat
 pop_faction_event = {
 	id = mindless.15
 	title = mindless.15.title
@@ -60,8 +33,8 @@ pop_faction_event = {
 			hidden:owner = {
 				switch = {
 					trigger = has_ethic
-					ethic_fanatic_collectivist = { text = mindless.15.desc.colle }
-					ethic_collectivist = { text = mindless.15.desc.colle }
+					ethic_fanatic_collectivist = { text = mindless.15.desc }
+					ethic_collectivist = { text = mindless.15.desc }
 					default = { text = mindless.15.desc }
 				}
 			}
@@ -87,8 +60,8 @@ pop_faction_event = {
 			hidden:owner = {
 				switch = {
 					trigger = has_ethic
-					ethic_fanatic_collectivist = { text = mindless.20.desc.colle }
-					ethic_collectivist = { text = mindless.20.desc.colle }
+					ethic_fanatic_collectivist = { text = mindless.20.desc }
+					ethic_collectivist = { text = mindless.20.desc }
 					default = { text = mindless.20.desc }
 				}
 			}

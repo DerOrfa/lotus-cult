@@ -1,4 +1,4 @@
-mindless_shells = {
+﻿mindless_shells = {
 	lose_support_on_pop_leave = no
 #	support_multiplier = 0.5
 	#country scope
@@ -131,21 +131,21 @@ mindless_shells = {
 								exists = pop_faction
 								pop_faction = { is_same_value = root }
 							}
-							planet = { # kill a growing from same species on that planet 
-#								planet_event = { id = mindless.11 }
+							planet = { # kill a growing pop from same species on that planet 
+								save_event_target_as = crisis_planet
 								random_pop = {
 									limit = {
 										is_growing = yes
 										is_same_species = prevprev
 									}
-									pop_event = { id = mindless.12 }
+									save_event_target_as = crisis_pop
+									pop_event = { id = mindless.10 }
 									kill_pop = yes
+									root = {add_support = -0.05}
 								}
 							}
 						}
 					}
-					pop_faction_event = { id = mindless.10 }
-					add_support = -0.15
 				}
 			}
 		}
@@ -167,6 +167,7 @@ mindless_shells = {
 								exists = pop_faction
 								pop_faction = { is_same_value = root }
 							}
+							save_event_target_as = crisis_pop
 							planet = {
 								save_event_target_as = crisis_planet
 							}
@@ -202,6 +203,7 @@ mindless_shells = {
 								pop_faction = { is_same_value = root }
 								has_modifier = mindess_slaves_eating_crisis_modifier
 							}
+							save_event_target_as = crisis_pop
 							planet = {
 								save_event_target_as = crisis_planet
 							}
