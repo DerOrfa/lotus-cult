@@ -1,16 +1,17 @@
 namespace = mindless
 
-pop_event = {
+planet_event = {
 	id = mindless.10
-	title = mindless.10.title
+	title = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS
+	location = Root
 	desc = {
 		trigger = {
 			hidden:owner = {
 				switch = {
 					trigger = has_ethic
-					ethic_fanatic_collectivist = { text = mindless.10.desc }
-					ethic_collectivist = { text = mindless.10.desc }
-					default = { text = mindless.10.desc }
+					ethic_fanatic_collectivist = { text = EVENT_MINDESS_SLAVES_FERTILITY_CRISIS_DESC }
+					ethic_collectivist = { text = EVENT_MINDESS_SLAVES_FERTILITY_CRISIS_DESC }
+					default = { text = EVENT_MINDESS_SLAVES_FERTILITY_CRISIS_DESC }
 				}
 			}
 		}
@@ -21,48 +22,59 @@ pop_event = {
 
 	option = {
 		name = OK
+		random_pop = {
+			limit = {
+				is_growing = yes
+				is_same_species = event_target:crisis_pop
+			}
+			kill_pop = yes
+		}
 	}
 }
 
 # Mindless slaves forget to eat
 pop_faction_event = {
 	id = mindless.15
-	title = mindless.15.title
+	title = POP_FACTION_MINDESS_SLAVES_EATING_CRISIS
 	desc = {
 		trigger = {
 			hidden:owner = {
 				switch = {
 					trigger = has_ethic
-					ethic_fanatic_collectivist = { text = mindless.15.desc }
-					ethic_collectivist = { text = mindless.15.desc }
-					default = { text = mindless.15.desc }
+					ethic_fanatic_collectivist = { text = EVENT_MINDESS_SLAVES_EATING_CRISIS_DESC }
+					ethic_collectivist = { text = EVENT_MINDESS_SLAVES_EATING_CRISIS_DESC }
+					default = { text = EVENT_MINDESS_SLAVES_EATING_CRISIS_DESC }
 				}
 			}
 		}
 	}
 	picture = GFX_evt_smugglers_in_bar
 	show_sound = event_conversation
-	location = event_target:crisis_planet
+	location = planet
 
 	is_triggered_only = yes
 
 	option = {
 		name = OK
+		add_modifier = {
+			modifier = mindess_slaves_eating_crisis_modifier
+			days = 90 # 3 MON
+		}
 	}
 }
 
 # Mindless slaves die of starvation
 pop_faction_event = {
 	id = mindless.20
-	title = mindless.20.title
+	title = POP_FACTION_MINDESS_SLAVES_DYING_CRISIS
 	desc = {
 		trigger = {
 			hidden:owner = {
 				switch = {
 					trigger = has_ethic
-					ethic_fanatic_collectivist = { text = mindless.20.desc }
-					ethic_collectivist = { text = mindless.20.desc }
-					default = { text = mindless.20.desc }
+					ethic_fanatic_collectivist = { text = EVENT_MINDESS_SLAVES_DYING_CRISIS_DESC }
+					ethic_collectivist = { text = EVENT_MINDESS_SLAVES_DYING_CRISIS_DESC }
+					default = { text = EVENT_MINDESS_SLAVES_DYING_CRISIS_DESC }
 				}
 			}
 		}
@@ -75,5 +87,8 @@ pop_faction_event = {
 
 	option = {
 		name = OK
+		event_target:crisis_pop = {
+			kill_pop = yes
+		}
 	}
 }

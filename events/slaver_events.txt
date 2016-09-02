@@ -55,13 +55,12 @@ pop_event = {
 
 		immediate = {
 			enslave_pop = yes
-			pop_remove_ethic = ethic_fanatic_individualist
-			pop_remove_ethic = ethic_individualist
 			pop_remove_ethic = ethic_fanatic_xenophobe
 			pop_remove_ethic = ethic_xenophobe
 			pop_remove_ethic = ethic_fanatic_militarist
 			pop_remove_ethic = ethic_fanatic_pacifist
 			pop_remove_ethic = ethic_fanatic_materialist
+			pop_add_ethic = ethic_collectivist
 
 			pop_event = {id=slaver.10}
 

@@ -119,31 +119,46 @@
 			max_support = 1
 
 			spawn_chance = {
-				base = 10
+				base = 5
+				modifier = {
+					factor = 2
+					owner = {
+						has_policy_flag = mind_control_encouraged
+					}
+				}
+				modifier = {
+					factor = 0
+					any_owned_pop = {
+						NOT = { has_trait = natural_slavers }
+						is_growing = yes
+					}
+				}
 			}
 
 			effect = {
 				custom_tooltip = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS_DESC
 				hidden_effect = {
 					owner = {
-						every_owned_pop = {
+						every_owned_planet = {
 							limit = {
-								exists = pop_faction
-								pop_faction = { is_same_value = root }
-							}
-							planet = { # kill a growing pop from same species on that planet 
-								save_event_target_as = crisis_planet
-								random_pop = {
-									limit = {
-										is_growing = yes
-										is_same_species = prevprev
-									}
-									save_event_target_as = crisis_pop
-									pop_event = { id = mindless.10 }
-									kill_pop = yes
-									root = {add_support = -0.05}
+								any_pop = {
+									exists = pop_faction
+									pop_faction = { is_same_value = root }
+								}
+								any_pop = {
+#									NOT = { has_trait = natural_slavers }
+									is_growing = yes
 								}
 							}
+							random_pop = {
+								limit = {
+									exists = pop_faction
+									pop_faction = { is_same_value = root }
+								}
+								save_event_target_as = crisis_pop
+							}
+							planet_event = { id = mindless.10 }
+							root = {add_support = -0.05}
 						}
 					}
 				}
@@ -155,7 +170,13 @@
 			max_support = 1
 
 			spawn_chance = {
-				base = 5
+				base = 3
+				modifier = {
+					factor = 2
+					owner = {
+						has_policy_flag = mind_control_encouraged
+					}
+				}
 			}
 
 			effect = {
@@ -168,13 +189,6 @@
 								pop_faction = { is_same_value = root }
 							}
 							save_event_target_as = crisis_pop
-							planet = {
-								save_event_target_as = crisis_planet
-							}
-							add_modifier = {
-								modifier = mindess_slaves_eating_crisis_modifier
-								days = 90 # 3 MON
-							}
 							root = {
 								pop_faction_event = { id = mindless.15 }
 								add_support = -0.15
@@ -190,7 +204,13 @@
 			max_support = 1
 
 			spawn_chance = {
-				base = 5
+				base = 3
+				modifier = {
+					factor = 2
+					owner = {
+						has_policy_flag = mind_control_encouraged
+					}
+				}
 			}
 
 			effect = {
@@ -207,7 +227,6 @@
 							planet = {
 								save_event_target_as = crisis_planet
 							}
-							kill_pop = yes
 							root = {
 								pop_faction_event = { id = mindless.20 }
 								add_support = -0.15
