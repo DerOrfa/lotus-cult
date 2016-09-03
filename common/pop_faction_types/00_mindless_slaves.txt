@@ -1,6 +1,6 @@
 ﻿mindless_shells = {
 	lose_support_on_pop_leave = no
-#	support_multiplier = 0.5
+	support_multiplier = 0.5
 	#country scope
 	is_potential = {
 		any_owned_pop = {
@@ -102,11 +102,11 @@
 	attraction = {#executed with a pop scope, country is stored in root, faction is stored in from
 		base = 0
 		modifier = {
-			add = 150
+			add = 170
 			has_modifier = pop_mindless
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			root = {
 				has_policy_flag = mind_control_encouraged
 			}
@@ -139,15 +139,11 @@
 				custom_tooltip = POP_FACTION_MINDESS_SLAVES_FERTILITY_CRISIS_DESC
 				hidden_effect = {
 					owner = {
-						every_owned_planet = {
+						random_owned_planet = {
 							limit = {
 								any_pop = {
 									exists = pop_faction
 									pop_faction = { is_same_value = root }
-								}
-								any_pop = {
-#									NOT = { has_trait = natural_slavers }
-									is_growing = yes
 								}
 							}
 							random_pop = {
@@ -155,10 +151,17 @@
 									exists = pop_faction
 									pop_faction = { is_same_value = root }
 								}
-								save_event_target_as = crisis_pop
+								planet = {
+									random_pop = {
+										limit = {
+											is_growing = yes
+											is_same_species = prevprev
+										}
+										pop_event = { id = mindless.10 }
+										root = {add_support = -0.1}
+									}
+								}
 							}
-							planet_event = { id = mindless.10 }
-							root = {add_support = -0.05}
 						}
 					}
 				}
@@ -229,7 +232,7 @@
 							}
 							root = {
 								pop_faction_event = { id = mindless.20 }
-								add_support = -0.15
+								add_support = -0.2
 							}
 						}
 					}

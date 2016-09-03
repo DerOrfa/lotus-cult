@@ -25,7 +25,7 @@
  POP_FACTION_MINDESS_SLAVES_EATING_CRISIS_DESC:0 "Seelenlose die nicht genug Nahrung zu sich nehmen, sind erwartungsgemäß schlechte Arbeiter"
  POP_FACTION_MINDESS_SLAVES_DYING_CRISIS:0 "Tod"
  POP_FACTION_MINDESS_SLAVES_DYING_CRISIS_DESC:0 "Unter Umständen sterben Seelenlose an Unterernährung und Entkräftung"
- EVENT_MINDESS_SLAVES_FERTILITY_CRISIS_DESC:0 "Offenbar haben die seelenlosen [crisis_pop.GetSpeciesNamePlural] auf [Root.GetName] vergessen wie man sich fortpflanzt. Usere Zuchbemühungen wurde empfindlich zurückgeworfen"
+ EVENT_MINDESS_SLAVES_FERTILITY_CRISIS_DESC:0 "Offenbar haben die seelenlosen [Root.GetSpeciesNamePlural] auf [Root.Planet.GetName] vergessen wie man sich fortpflanzt. Usere Zuchbemühungen wurde empfindlich zurückgeworfen"
  EVENT_MINDESS_SLAVES_EATING_CRISIS_DESC:0 "1 [crisis_pop.GetName] 2 [This.GetName] 3 [Prev.GetName]."
  EVENT_MINDESS_SLAVES_DYING_CRISIS_DESC:0 "1 [crisis_pop.GetName] 2 [This.GetName] 3 [Prev.GetName]."
  
