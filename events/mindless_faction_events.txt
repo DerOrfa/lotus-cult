@@ -53,9 +53,11 @@ pop_faction_event = {
 
 	option = {
 		name = OK
-		add_modifier = {
-			modifier = mindess_slaves_eating_crisis_modifier
-			days = 90 # 3 MON
+		event_target:crisis_pop = {
+			add_modifier = {
+				modifier = mindess_slaves_eating_crisis_modifier
+				days = 90 # 3 MON
+			}
 		}
 	}
 }

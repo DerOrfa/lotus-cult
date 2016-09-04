@@ -119,7 +119,7 @@
 			max_support = 1
 
 			spawn_chance = {
-				base = 5
+				base = 7
 				modifier = {
 					factor = 2
 					owner = {
@@ -173,7 +173,7 @@
 			max_support = 1
 
 			spawn_chance = {
-				base = 3
+				base = 7
 				modifier = {
 					factor = 2
 					owner = {
@@ -207,7 +207,7 @@
 			max_support = 1
 
 			spawn_chance = {
-				base = 3
+				base = 7
 				modifier = {
 					factor = 2
 					owner = {

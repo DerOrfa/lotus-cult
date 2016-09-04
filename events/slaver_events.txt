@@ -34,6 +34,41 @@ pop_event = {
 	}
 }
 
+pop_event = {
+	id = slaver.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		enslave_pop = yes
+
+		if = { # kill growing pops if
+			limit = {
+				owner = {
+					has_policy_flag = slavery_procreation_not_allowed
+				}
+				planet = {
+					not = {
+						any_pop = {
+							is_same_species = prev
+							is_enslaved = no
+						}
+					}
+				}
+			}
+			planet = {
+				random_pop = { #we actually wan't to kill all, but it should only be one anyway
+					limit = {
+						is_same_species = prevprev
+						is_growing = yes
+					}
+					kill_pop = yes
+				}
+			}
+		}
+	}
+}
+
 #break a pop
 pop_event = {
 		id = "slaver.100"
@@ -54,7 +89,7 @@ pop_event = {
 
 
 		immediate = {
-			enslave_pop = yes
+			pop_event = {id=slaver.11} # enslave pop
 			pop_remove_ethic = ethic_fanatic_xenophobe
 			pop_remove_ethic = ethic_xenophobe
 			pop_remove_ethic = ethic_fanatic_militarist
@@ -62,7 +97,7 @@ pop_event = {
 			pop_remove_ethic = ethic_fanatic_materialist
 			pop_add_ethic = ethic_collectivist
 
-			pop_event = {id=slaver.10}
+			pop_event = {id=slaver.10} # put pop in docile slaves faction
 
 			if = {
 				limit = { has_modifier = pop_broken }
