@@ -44,22 +44,21 @@ pop_event = {
 
 		if = { # kill growing pops if
 			limit = {
-				owner = {
-					has_policy_flag = slavery_procreation_not_allowed
-				}
+				owner = {has_policy_flag = slavery_procreation_not_allowed}
 				planet = {
 					not = {
 						any_pop = {
-							is_same_species = prev
+							is_same_species = root
 							is_enslaved = no
+							is_growing = no
 						}
 					}
 				}
 			}
 			planet = {
-				random_pop = { #we actually wan't to kill all, but it should only be one anyway
+				random_pop = { #we actually want to kill all, but it should only be one anyway
 					limit = {
-						is_same_species = prevprev
+						is_same_species = root
 						is_growing = yes
 					}
 					kill_pop = yes
