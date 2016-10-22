@@ -4,7 +4,7 @@
 ##########################################################################
 
 pop_broken = {
-		pop_slavery_tolerance = 1.5
+		pop_slavery_tolerance = 1
 		slave_production_output = 0.1
 		slave_food_output = 0.1
 		pop_food_req_mult = -0.2
@@ -15,7 +15,7 @@ pop_broken = {
 }
 
 pop_mindless = {
-	pop_slavery_tolerance = 2.5
+	pop_slavery_tolerance = 1.5
 	slave_production_output = 0.3
 	slave_food_output = 0.3
 	pop_food_req_mult = -0.2
