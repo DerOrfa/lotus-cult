@@ -1,5 +1,5 @@
 natural_slavers  = {
-	cost = 0
+	cost = 1
 	opposites = { "trait_repugnant" "trait_strong" "trait_very_strong" "trait_resilient" "trait_industrious" "trait_agrarian"}
 	modifier = {
 		tile_resource_society_research_mult = 0.25

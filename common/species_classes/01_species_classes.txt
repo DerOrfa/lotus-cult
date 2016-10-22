@@ -4,10 +4,21 @@
 # can specify playable=no to disable people from picking specified class.
 # can specify randomized=no to filter specified class from randomization.
 
-MAM = {
-	custom_portraits = {#add additional portraits when customizing species
-    portraits = {
-      "lotus"
-    }
+HUM = {
+	portraits = {
+		"human"
+		"humanoid_02"
+		"humanoid_03"
+		"humanoid_04"
+		"humanoid_05"
+		"lotus"
 	}
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"human"
+	}
+
+	graphical_culture = mammalian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
 }

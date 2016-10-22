@@ -4,4 +4,4 @@ tags={
 	"Species"
 }
 picture="lotus.jpg"
-supported_version="1.2.*"
+supported_version="1.3.*"

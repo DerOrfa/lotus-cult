@@ -208,6 +208,7 @@ event = {
 					}
 					create_pop = {
 						species = owner_main_species
+						ethos = owner
 					}
 				}
 
