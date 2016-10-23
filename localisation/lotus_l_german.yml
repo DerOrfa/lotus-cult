@@ -8,7 +8,7 @@
  policy_mind_control:0  "Gedankenkontrolle"
  policy_mind_control_desc:0 "Reglementierung der natürlichen Gedankenkontrolle"
  mind_control_regulated:0 "Reguliert"
- mind_control_regulated_name:0 "strenge Regeln zur Gedankenkontrolle"
+ mind_control_regulated_name:0 "Strenge Regeln zur Gedankenkontrolle"
  mind_control_regulated_desc:0 "Öffentliche Programme und Gesetzte um die schlimmsten Auswüchste der natürlichen Gedankenkontrolle zu verhindern."
  mind_control_unregulated:0 "Unreguliert"
  mind_control_unregulated_name:0 "keine Regeln zur Gedankenkontrolle"
@@ -26,6 +26,5 @@
  POP_FACTION_MINDESS_SLAVES_DYING_CRISIS:0 "Tod"
  POP_FACTION_MINDESS_SLAVES_DYING_CRISIS_DESC:0 "Unter Umständen sterben Seelenlose an Unterernährung und Entkräftung"
  EVENT_MINDESS_SLAVES_FERTILITY_CRISIS_DESC:0 "Offenbar haben die seelenlosen [Root.GetSpeciesNamePlural] auf [Root.Planet.GetName] vergessen wie man sich fortpflanzt. Usere Zuchbemühungen wurden um Monate zurückgeworfen"
- EVENT_MINDESS_SLAVES_EATING_CRISIS_DESC:0 "1 [crisis_pop.GetName] 2 [This.GetName] 3 [Prev.GetName]."
+ EVENT_MINDESS_SLAVES_EATING_CRISIS_DESC:0 "Einige seelenlose [crisis_pop.GetSpeciesNamePlural] auf [crisis_pop.Planet.GetName] sind bei der Arbeit zusammengebrochen. Eine Untersuchung des Vorfalls ergab, dass sie durch die Gedankenkontrolle ihren natührlichen Selbsterhaltungstrieb komplett verlohren haben. Sie werden jetzt Zwangsernährt, aber wir sollten vielleicht die Gedankenkontrolle etwas einschränken, bevor wir wertvolle Sklaven verlieren."
  EVENT_MINDESS_SLAVES_DYING_CRISIS_DESC:0 "1 [crisis_pop.GetName] 2 [This.GetName] 3 [Prev.GetName]."
- 
