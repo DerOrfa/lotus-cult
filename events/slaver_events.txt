@@ -34,7 +34,7 @@ pop_event = {
 	}
 }
 
-pop_event = {
+pop_event = { #enslave pop
 	id = slaver.11
 	hide_window = yes
 	is_triggered_only = yes
@@ -116,9 +116,6 @@ pop_event = {
 
 pop_event = {
 	id = "slaver.101"
-#	title = "pop.1.name"
-#	desc = "pop.1.desc"
-#	picture = GFX_evt_cybernetics
 	hide_window = yes
 
 	trigger = {
@@ -177,7 +174,7 @@ event = {
 				save_event_target_as = home_planet
 				random_owned_pop = {
 					create_species = {
-						name = "Servants"
+						name = random
 						class = THIS
 						portrait = random
 						homeworld = event_target:home_planet
@@ -224,12 +221,12 @@ event = {
 						}
 					}
 					create_pop = { # put servants to work
-						species = Servants
+						species = last_created
 					}
 				}
 
 				every_owned_pop = { #and enslave them
-					limit = { is_species = Servants }
+					limit = { NOT { is_species = owner_main_species } }
 					pop_event = {id = slaver.100}
 				}
 			}
