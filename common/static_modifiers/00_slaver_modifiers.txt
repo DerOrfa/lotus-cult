@@ -16,8 +16,8 @@ pop_broken = {
 
 pop_mindless = {
 	pop_slavery_tolerance = 1.5
-	slave_production_output = 0.3
-	slave_food_output = 0.3
+	slave_production_output = 0.2
+	slave_food_output = 0.15
 	pop_food_req_mult = -0.2
 	tile_resource_physics_research_mult = -1
 	tile_resource_society_research_mult = -1
